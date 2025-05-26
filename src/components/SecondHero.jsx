@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const SecondHero = () => {
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-screen w-[1185px] mx-auto p-5 overflow-hidden">
 
       {/* Mobile-only parallax image */}
       <img
