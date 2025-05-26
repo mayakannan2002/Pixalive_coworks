@@ -38,8 +38,8 @@ const SecondHero = () => {
           Work Smarter, <br className="hidden sm:block" /> Not Harder
         </h1>
         <button
-          className="bg-[#000000] text-[#FFFFFF] text-xl md:mb-45 mb-20 px-6 py-3 md:px-5 md:py-2 mt-10  hover:bg-amber-500 transition"
-          style={{ fontFamily: 'LufgaThin' }}
+className="bg-[#000000] text-[#FFFFFF] text-xl md:mb-45 mb-20 px-6 py-3 md:px-5 md:py-2 mt-10 cursor-pointer hover:bg-white hover:text-black transition"
+style={{ fontFamily: 'LufgaThin' }}
         >
           Book a Space
         </button>
