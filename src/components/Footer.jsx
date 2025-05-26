@@ -37,7 +37,7 @@ const Footer = () => {
             </div>
 
             <p className="text-sm mt-8 opacity-60">
-                2025 All Rights Reserved Pixelive co-workspace
+                2025 All Rights Reserved Pixelive co-workspaces
             </p>
         </footer>
     );
