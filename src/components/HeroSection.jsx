@@ -1,79 +1,61 @@
 import React from 'react';
-import heroBg from '../assets/home/herobg.png';
-import logo from '../assets/home/plogo.png';
-import { Link } from 'react-router-dom';
+import bgImage from './../../src/assets/home/herobg1.png'; // Replace with your actual background image path
+import logo from './../../src/assets/home/plogo.png'; // Replace with your logo image path
 
 const HeroSection = () => {
-    return (
-        <div className="relative">
-            {/* Background Image */}
-            <img
-                src={heroBg}
-                alt="Coworking space"
-                className="absolute inset-0 w-full h-full object-cover"
-                loading="lazy"
-            />
+  return (
+    <section
+      className="relative w-full h-screen bg-cover bg-center font-lufga text-white"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      <div className="absolute inset-0 bg-black/40 z-0"></div>
 
-            <section className="relative h-screen overflow-hidden">
-                {/* Overlay */}
-                <div className="absolute inset-0 z-10 bg-black/30"></div>
+      {/* Header */}
+      <div className="relative z-10 flex justify-between items-center px-4 sm:px-6 py-4 max-w-[1280px] mx-auto">
+        <img src={logo} alt="Logo" className="w-10 h-10" />
+        <button className="bg-white text-black px-4 py-2  text-sm font-medium hover:bg-gray-200 transition cursor-pointer">
+          Let's talk ↗
+        </button>
+      </div>
 
-                {/* Content Container */}
-                <div className="relative z-20 max-w-[1270px] mx-auto h-full">
-                    {/* Top Bar */}
-                    <div className="absolute top-4 left-6 flex items-center gap-2">
-                        <img src={logo} className="w-12 h-12 cursor-pointer" loading="lazy" alt="logo" />
-                    </div>
+      {/* Main Content */}
+      <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 mt-29 sm:mt-33">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-light leading-snug sm:leading-snug md:leading-tight">
+          Smart <span className="font-semibold italic underline underline-offset-4">Workspaces.</span>
+          <br />
+          Seamless <span className="font-semibold italic underline underline-offset-4">Tools.</span>
+          <br />
+          Built for <span className="font-extrabold italic underline underline-offset-4">Designers, Developers & Doers.</span>
+        </h1>
 
-                    {/* Mobile Title */}
-                    <div className="block md:hidden absolute top-20 left-1/2 transform -translate-x-1/2 text-white font-light text-[18px]">
-                        Pixalive tech co-works
-                    </div>
+        <p className="text-sm sm:text-base md:text-lg mt-6 sm:mt-8 text-white/90">
+          Whether you're a freelancer, a startup, or a remote team, we've built the perfect workspace
+          <br className="hidden sm:block" />
+          around you. Modern desks, fast internet, and ready-to-use laptops.
+        </p>
 
-                    {/* Desktop Title */}
-                    <div className="hidden md:block absolute top-6 left-1/2 transform -translate-x-1/2 text-white font-light text-[18px]">
-                        Pixalive tech co-works
-                    </div>
+        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+          <button className="bg-white text-black px-6 py-2.5 font-medium  hover:bg-gray-200 transition cursor-pointer">
+            Book a Space 
+          </button>
 
-                    <Link
-                        to="/contact"
-                        className="absolute top-6 right-6 text-[18px] text-white group"
-                    >
-                        Let’s talk{' '}
-                        <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
-                            ↗
-                        </span>
-                    </Link>
-
-                    {/* Mobile Layout */}
-                    <div className="md:hidden flex flex-col items-center justify-center text-white px-4 h-full">
-                        <h1 className="text-4xl text-center font-thin leading-tight font-LufgaLight">
-                            Craft your<br />success here
-                        </h1>
-                        <button className="px-6 py-2 mt-6 bg-white text-black rounded hover:bg-gray-200 transition text-base font-normal">
-                            Book a Space
-                        </button>
-                    </div>
-
-                    {/* Desktop Layout */}
-                    <div className="hidden md:flex flex-col items-center justify-center h-full text-white px-4">
-                        <div className="flex flex-row items-center gap-6">
-                            <h1 className="text-6xl lg:text-[123px] font-thin leading-none font-LufgaLight">
-                                Craft your
-                            </h1>
-                            <button className="px-6 py-2 bg-white text-black rounded hover:bg-gray-200 transition text-base font-normal">
-                                Book a Space
-                            </button>
-                        </div>
-                        <h1 className="text-6xl lg:text-[123px] font-thin mt-4 leading-none">
-                            success here
-                        </h1>
-                    </div>
-                </div>
-            </section>
+          {/* Scroll Down Desktop */}
+          <div className="hidden md:flex items-center gap-2 border border-white px-4 py-2  hover:bg-white/20 transition cursor-pointer">
+            <span>Scroll Down</span>
+            <span className="text-xl">↓</span>
+          </div>
         </div>
-    );
+      </div>
+
+      {/* Scroll Down Mobile */}
+      <div className="absolute bottom-4 right-4 md:hidden z-10">
+        <div className="flex items-center gap-2 border border-white px-4 py-2  hover:bg-white/20 transition cursor-pointer">
+          <span>Scroll Down</span>
+          <span className="text-xl">↓</span>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default HeroSection;
-    

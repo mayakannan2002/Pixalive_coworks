@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 const SecondHero = () => {
   return (
-    <div className="relative h-screen w-[1185px] mx-auto p-5 overflow-hidden">
+    <div className="relative w-full max-w-[1260px] h-[656px] mx-auto px-4 sm:px-6 lg:px-8 md:mt-[140px] overflow-hidden">
 
-      {/* Mobile-only parallax image */}
+      {/* Mobile Image */}
       <img
         src={bgimage}
         alt="Hero Background"
@@ -14,7 +14,7 @@ const SecondHero = () => {
         style={{ transform: 'translateZ(0)', willChange: 'transform' }}
       />
 
-      {/* Desktop background with Tailwind */}
+      {/* Desktop Background */}
       <div
         className="hidden md:block absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${bgimage})` }}
@@ -23,18 +23,24 @@ const SecondHero = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
 
-      {/* Hero content with animation that triggers every time in view */}
+      {/* Hero Content */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeInOut' }}
-        viewport={{ once: false, amount: 0.6 }} // 👈 triggers every time it's 60% in view
-        className="relative z-10 flex flex-col justify-center items-center text-center px-4 h-full"
+        viewport={{ once: false, amount: 0.6 }}
+        className="relative z-10 flex flex-col justify-center items-center text-center   h-full"
       >
-        <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold mb-6">
+        <h1
+          className="text-[#FFFFFF] text-3xl sm:text-4xl md:text-5xl lg:text-6xl  leading-tight"
+          style={{ fontFamily: 'LufgaThin' }}
+        >
           Work Smarter, <br className="hidden sm:block" /> Not Harder
         </h1>
-        <button className="bg-white cursor-pointer text-black font-medium px-6 py-3 rounded hover:bg-gray-200 transition">
+        <button
+className="bg-[#000000] text-[#FFFFFF] text-xl md:mb-45 mb-20 px-6 py-3 md:px-5 md:py-2 mt-10 cursor-pointer hover:bg-white hover:text-black transition"
+style={{ fontFamily: 'LufgaThin' }}
+        >
           Book a Space
         </button>
       </motion.div>

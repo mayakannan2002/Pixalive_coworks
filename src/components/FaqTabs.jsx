@@ -12,31 +12,31 @@ const faqData = [
         title: "Customizable Workspaces",
         number: "02",
         content:
-            "Design your ideal workspace with flexible layouts, themes, and utilities.",
+            "From private cabins to flexible hot desks, choose what works best for your workflow—and scale as you grow.",
     },
     {
         title: "24/7 Access & Security",
         number: "03",
         content:
-            "Round-the-clock access with biometric security and monitored entry.",
+            "Work on your schedule, with round-the-clock access, biometric security, and CCTV surveillance.",
     },
     {
         title: "Community & Collaboration",
         number: "04",
         content:
-            "Engage with fellow professionals and grow your network organically.",
+            "Engage with a diverse network of founders, coders, marketers, and mentors through curated events and workshops.",
     },
     {
         title: "End-to-End Business Support",
         number: "05",
         content:
-            "We help with business setup, legal services, mail handling, and more.",
+            "Need interns, laptops, marketing help, or a registered office? We’ve got you covered through our ecosystem.",
     },
     {
         title: "FOCO Model Partnership Opportunities",
         number: "06",
         content:
-            "Partner with us in a Franchise-Owned, Company-Operated growth model.",
+            "Own a commercial property? Collaborate with us under a hassle-free revenue-sharing model. We operate. You earn.",
     },
 ];
 
@@ -44,12 +44,12 @@ const FaqTabs = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div className="max-w-[1260px] mx-auto md:px-10 py-10">
-            <h2 className="text-sm md:text-lg font-medium text-black mb-6">
+        <div className="max-w-[1260px]  md:mt-26 mx-auto md:px-10 px-6 py-10">
+            <h2 className="text-sm md:text-lg font-medium text-black mb-15">
                 Why Pixalive tech Co-work?
             </h2>
 
-            <div className="bg-white space-y-2">
+            <div className="bg-white space-y-2.5 ">
                 {faqData.map((item, index) => (
                     <div key={index}>
                         <button
