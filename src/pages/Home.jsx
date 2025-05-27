@@ -5,7 +5,7 @@ import Locations from "../components/Locations"
 import MembershipSlider from "../components/MembershipSlider"
 import PlansAndPricing from "../components/PlansAndPricing"
 import PricingCards from "../components/PricingCards"
-import SecondHero from "../components/SecondHero"
+import LaptopBookingSection from "../components/SecondHero"
 import WorkplaceIntro from "../components/WorkplaceIntro"
 
 export const Home = () => {
@@ -15,7 +15,7 @@ export const Home = () => {
         <WorkplaceIntro />
         <MembershipSlider />
         <FaqTabs />
-        <SecondHero />
+        <LaptopBookingSection />
         <PlansAndPricing  />
         <PricingCards />
         <Locations />

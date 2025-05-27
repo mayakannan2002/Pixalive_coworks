@@ -1,51 +1,44 @@
-import React from 'react';
-import bgimage from '../assets/home/secherobg.png';
-import { motion } from 'framer-motion';
+import React from "react";
+import BG1 from "../../src/assets/home/bg1.png";
+import { ArrowRight } from "lucide-react";
 
-const SecondHero = () => {
+const LaptopBookingSection = () => {
   return (
-    <div className="relative w-full max-w-[1260px] h-[656px] mx-auto px-4 sm:px-6 lg:px-8 md:mt-[140px] overflow-hidden">
-
-      {/* Mobile Image */}
-      <img
-        src={bgimage}
-        alt="Hero Background"
-        className="absolute inset-0 w-full h-full object-cover md:hidden"
-        style={{ transform: 'translateZ(0)', willChange: 'transform' }}
-      />
-
-      {/* Desktop Background */}
-      <div
-        className="hidden md:block absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${bgimage})` }}
-      ></div>
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40 z-0"></div>
-
-      {/* Hero Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeInOut' }}
-        viewport={{ once: false, amount: 0.6 }}
-        className="relative z-10 flex flex-col justify-center items-center text-center   h-full"
-      >
-        <h1
-          className="text-[#FFFFFF] text-3xl sm:text-4xl md:text-5xl lg:text-6xl  leading-tight"
-          style={{ fontFamily: 'LufgaThin' }}
-        >
-          Work Smarter, <br className="hidden sm:block" /> Not Harder
+    <section
+      className="relative w-full h-screen md:h-[850px] mt-15 md:mt-35 bg-cover bg-center font-lufga  flex justify-center items-center"
+      style={{
+        backgroundImage: `url(${BG1})`, // Replace with your actual image path
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50 z-0"></div>
+      <div className="relative z-10 max-w-[1280px] mx-auto  md:ml-43 ml:15  text-[#ffffff] ">
+        <h1 className="text-lg  sm:text-lg md:text-lg font-semibold leading-snug text-[#B0B0B0] sm:leading-snug md:leading-tight">
+        Laptop Rental
         </h1>
-        <button
-className="bg-[#000000] text-[#FFFFFF] text-xl md:mb-45 mb-20 px-6 py-3 md:px-5 md:py-2 mt-10 cursor-pointer hover:bg-white hover:text-black transition"
-style={{ fontFamily: 'LufgaThin' }}
-        >
-          Book a Space
-        </button>
-      </motion.div>
-    </div>
+        <h1 className="text-2xl sm:text-3xl md:text-5xl md:mt-20  leading-snug sm:leading-snug md:leading-[150%]">
+        High-Performance <span className="font-black italic underline underline-offset-12">Laptops.</span>
+          <br />
+          Smart <span className="font-black italic underline underline-offset-12">Rental Plans.</span>
+          <br />
+          Just for <span className="font-black italic underline underline-offset-12">Tech-Driven Teams.</span>
+        </h1>
+
+        <p className="text-sm sm:text-md md:text-lg mt-6 sm:mt-8 text-[#B0B0B0]">
+        Whether you’re a freelancer, startup, or visiting professional, our laptop rental service offers 
+          <br className="hidden sm:block" />
+          you the tech you need—without the hassle of owning or maintaining devices.
+        </p>
+
+        <div className="mt-6 sm:mt-8 flex flex-col  sm:flex-row sm:justify-between sm:items-center gap-4 ">
+          <button className="bg-white text-[#000000] px-6 py-2.5 font-semibold  hover:bg-gray-200 transition cursor-pointer">
+          Book your laptop →
+
+
+          </button>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default SecondHero;
+export default LaptopBookingSection;
