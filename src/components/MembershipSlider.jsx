@@ -76,7 +76,7 @@ const MembershipSlider = () => {
   }, []);
 
   return (
-    <div className="max-w-[1260px] mx-auto px-4 sm:px-6 md:px-10 py-12 bg-white">
+    <div className="max-w-[1260px] mx-auto px-4 sm:px-6 md:px-10 py-12">
       <h2 className="text-[18px] sm:text-2xl font-medium mb-6">
         Discover Our Membership <br className="hidden sm:block" /> Plans
       </h2>
@@ -94,17 +94,17 @@ const MembershipSlider = () => {
               className="flex-shrink-0 w-[85vw] sm:w-[60vw] md:w-[40vw] lg:w-[calc(100%/3.2)] scroll-snap-align-start"
               style={{ scrollSnapAlign: "start" }}
             >
-              <div className="bg-white shadow-md overflow-hidden">
+              <div >
                 <img
                   src={plan.image}
                   alt={plan.title}
-                  className="w-full h-56 md:h-64 object-cover"
+                  className="w-full h-85  object-cover "
                   loading="lazy"
                 />
-                <div className="p-4">
-                  <h3 className="text-lg font-bold">{plan.title}</h3>
+              
+                  <h3 className="text-lg font-bold mt-5">{plan.title}</h3>
                   <p className="text-sm text-gray-600 mt-2">{plan.description}</p>
-                </div>
+                
               </div>
             </div>
           ))}
