@@ -3,40 +3,46 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const faqData = [
     {
-        title: "Tech-Driven Spaces",
+        title: "Unbeatable Location",
         number: "01",
+        content:
+            "Located in the heart of Bengaluru, our coworking space offers unparalleled access to the city's vibrant culture and tech scene.",
+    },
+    {
+        title: "Tech-Driven Spaces",
+        number: "02",
         content:
             "Smart infrastructure with high-speed Wi-Fi, IoT-enabled meeting rooms, and power backup to keep your work uninterrupted.",
     },
     {
-        title: "Customizable Workspaces",
-        number: "02",
+        title: "Flexible Workspace Solutions",
+        number: "03",
         content:
-            "From private cabins to flexible hot desks, choose what works best for your workflow—and scale as you grow.",
+            "Enjoy flexible workspace options tailored to your comfort and productivity, Choose from private cabins, dedicated desks, hot desks, and meeting rooms.",
     },
     {
         title: "24/7 Access & Security",
-        number: "03",
-        content:
-            "Work on your schedule, with round-the-clock access, biometric security, and CCTV surveillance.",
-    },
-    {
-        title: "Community & Collaboration",
         number: "04",
         content:
-            "Engage with a diverse network of founders, coders, marketers, and mentors through curated events and workshops.",
+            "24/7 access to shared spaces, secure access control, and state-of-the-art security measures to ensure your safety and privacy.",
     },
     {
-        title: "End-to-End Business Support",
+        title: "Vibrant Community & Networking",
         number: "05",
         content:
-            "Need interns, laptops, marketing help, or a registered office? We’ve got you covered through our ecosystem.",
+            "Join a vibrant community of like-minded professionals, collaborate, learn, and grow together in a supportive environment.",
+    },
+    {
+        title: "End-to-End Business Supports",
+        number: "06",
+        content:
+            "End-to-end business support, including legal, tax, and accounting services to help you manage your business effectively.",
     },
     {
         title: "FOCO Model Partnership Opportunities",
-        number: "06",
+        number: "07",
         content:
-            "Own a commercial property? Collaborate with us under a hassle-free revenue-sharing model. We operate. You earn.",
+            "FOCO Model Partnership Opportunities to grow your business and connect with like-minded professionals and entrepreneurs. ",
     },
 ];
 

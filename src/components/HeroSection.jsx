@@ -19,8 +19,8 @@ const HeroSection = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 mt-29 sm:mt-33">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-light leading-snug sm:leading-snug md:leading-[180%]">
+      <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 mt-20 sm:mt-23">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-light leading-[180%] sm:leading-snug md:leading-[180%]">
           Smart <span className="font-black italic  underline underline-offset-12">Workspaces.</span>
           <br />
           Seamless <span className="font-black italic underline underline-offset-12">Tools.</span>
@@ -28,14 +28,14 @@ const HeroSection = () => {
           Built for <span className="font-black italic underline underline-offset-12">Designers, Developers & Doers.</span>
         </h1>
 
-        <p className="text-sm sm:text-base md:text-lg mt-3 sm:mt-8 text-[#B0B0B0]">
+        <p className="text-md sm:text-base md:text-lg mt-6 sm:mt-8 text-[#B0B0B0]">
           Whether you're a freelancer, a startup, or a remote team, we've built the perfect workspace
           <br className="hidden sm:block" />
           around you. Modern desks, fast internet, and ready-to-use laptops.
         </p>
 
-        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
-          <button className="bg-white text-black px-6 py-2.5 font-semibold  hover:bg-gray-200 transition cursor-pointer">
+        <div className="mt-13 sm:mt-8 flex flex-col  sm:flex-row sm:justify-between sm:items-center gap-4">
+          <button className="bg-white text-black  px-6 py-2.5 w-46 sm:w-auto text-lg font-semibold  hover:bg-gray-200 transition cursor-pointer">
             Book a Space →
 
           </button>
