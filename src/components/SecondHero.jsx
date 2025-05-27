@@ -5,36 +5,38 @@ import { ArrowRight } from "lucide-react";
 const LaptopBookingSection = () => {
   return (
     <section
-      className="relative w-full h-[600px] md:h-[900px] mt-15 md:mt-35 bg-cover bg-center font-lufga  flex justify-center items-center"
+      className="relative w-full min-h-[600px] md:min-h-[900px] bg-cover bg-center font-lufga flex justify-center items-center"
       style={{
-        backgroundImage: `url(${BG1})`, // Replace with your actual image path
+        backgroundImage: `url(${BG1})`,
       }}
     >
-      <div className="absolute inset-0 bg-black/50 z-0"></div>
-      <div className="relative z-10 max-w-[1280px] mx-auto md:p-0 p-3 md:ml-43 ml:15  text-[#ffffff] ">
-        <h1 className="text-lg  sm:text-lg md:text-lg font-semibold leading-snug text-[#B0B0B0] sm:leading-snug md:leading-tight">
-        Laptop Rental
-        </h1>
-        <h1 className="text-2xl sm:text-3xl md:text-5xl md:mt-20 mt-8 leading-[180%] sm:leading-snug md:leading-[150%]">
-        High-Performance <span className="font-black italic underline underline-offset-12">Laptops.</span>
-          <br />
-          Smart <span className="font-black italic underline underline-offset-12">Rental Plans.</span>
-          <br />
-          Just for <span className="font-black italic underline underline-offset-12">Tech-Driven Teams.</span>
-        </h1>
+      <div className="absolute inset-0 bg-black/50 z-0" />
+      
+      <div className="relative z-10 w-full max-w-[1280px] px-4 sm:px-6 lg:px-8 text-white">
+        <div className="py-12 sm:py-16 md:py-24 lg:py-32">
+          <h2 className="text-base sm:text-lg md:text-xl font-semibold text-[#B0B0B0]">
+            Laptop Rental
+          </h2>
 
-        <p className="text-md sm:text-md md:text-lg mt-6 sm:mt-8 text-[#B0B0B0]">
-        Whether you’re a freelancer, startup, or visiting professional, our laptop rental service offers 
-          <br className="hidden sm:block" />
-          you the tech you need—without the hassle of owning or maintaining devices.
-        </p>
+          <h1 className="mt-4 text-2xl sm:text-4xl md:text-5xl font-semibold leading-snug md:leading-[150%]">
+            High-Performance <span className="font-black italic underline underline-offset-8">Laptops.</span>
+            <br />
+            Smart <span className="font-black italic underline underline-offset-8">Rental Plans.</span>
+            <br />
+            Just for <span className="font-black italic underline underline-offset-8">Tech-Driven Teams.</span>
+          </h1>
 
-        <div className="mt-10 sm:mt-8 flex flex-col  sm:flex-row sm:justify-between sm:items-center gap-4 ">
-          <button className="bg-white text-[#000000] px-6 py-2.5 w-50 sm:w-auto font-semibold  hover:bg-gray-200 transition cursor-pointer">
-          Book your laptop →
+          <p className="mt-6 text-sm sm:text-base md:text-lg text-[#B0B0B0]">
+            Whether you’re a freelancer, startup, or visiting professional, our laptop rental service offers
+            <br className="hidden sm:inline" />
+            you the tech you need—without the hassle of owning or maintaining devices.
+          </p>
 
-
-          </button>
+          <div className="mt-8 sm:mt-10">
+            <button className="bg-white mt-20 text-black px-6 py-3 font-semibold rounded-md hover:bg-gray-200 transition">
+              Book your laptop →
+            </button>
+          </div>
         </div>
       </div>
     </section>

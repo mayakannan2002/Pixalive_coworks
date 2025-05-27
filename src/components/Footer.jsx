@@ -1,46 +1,104 @@
-import { FaInstagram, FaFacebookF, FaTwitter, FaLinkedin } from 'react-icons/fa';
-import { FiSend } from 'react-icons/fi';
-import logo from '../assets/home/plogo.png';
+import React from "react";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
-    return (
-        <footer className="bg-black text-white px-4 py-12 text-center">
-            <p className="text-sm mb-4 tracking-widest uppercase">Pixelive tech co-works</p>
+  return (
+    <div className="bg-black px-6 md:px-16 py-10 overflow-hidden relative">
+      <div className="w-full max-w-7xl mx-auto text-white">
+        <div className="flex flex-col md:flex-row justify-between gap-10 text-sm">
+          
+          {/* Left Section */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-2xl sm:text-3xl font-normal mt-4 mb-6 text-left">
+              Let's work Together
+            </h2>
 
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">STAY CONNECTED</h2>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=pixalivetech@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-2 text-base sm:text-lg cursor-pointer hover:underline block text-left"
+            >
+              contact@pixalivetech.com
+            </a>
+            <a
+              href="https://wa.me/918778584566"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-2 text-base sm:text-lg cursor-pointer hover:underline block text-left"
+            >
+              +91 87785 84566
+            </a>
+          </div>
 
-            <div className="flex justify-center items-center gap-2 mb-8 w-full max-w-md mx-auto">
-                <input
-                    type="email"
-                    placeholder="Email address"
-                    className="px-4 py-2 w-2/3 md:w-3/4 border border-white rounded-md text-black bg-white placeholder-black"
-                />
+          {/* Right Section */}
+          <div className="w-full md:w-1/2 flex flex-col items-start md:items-end">
+            <div className="w-full max-w-md text-base sm:text-lg grid grid-cols-2 gap-6">
+              
+              {/* Navigation */}
+              
 
-                <button className="bg-white text-black p-3 cursor-pointer rounded-md">
-                    <FiSend />
-                </button>
+              {/* Social Links with icons and animated arrow */}
+              <div className="flex flex-col items-start gap-2">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61572736722664"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2 hover:underline cursor-pointer"
+                >
+                  
+                  Facebook
+                  <FaFacebookF />
+                </a>
+                <a
+                  href="https://www.instagram.com/pixalivetech/?next=%2F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2 hover:underline cursor-pointer"
+                >
+                  Instagram
+                                    <FaInstagram />
+
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/pixalive-technology-network/?viewAsMember=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2 hover:underline cursor-pointer"
+                >
+                  LinkedIn
+                                    <FaLinkedinIn />
+
+                </a>
+                <a
+                  href="https://x.com/Pixalivetech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2 hover:underline cursor-pointer"
+                >
+                  Twitter
+                                    <FaXTwitter />
+
+                </a>
+              </div>
             </div>
 
-            <div className="flex justify-between items-center px-6 md:px-12 mt-12">
-                {/* Left Logo */}
-                <div className="text-3xl">
-                    <img className='w-[46px] h-[46px] cursor-pointer ' loading='lazy' src={logo} alt="" />
-                </div>
-
-                {/* Social Icons */}
-                <div className="flex gap-4 text-xl cursor-pointer">
-                    <FaInstagram />
-                    <FaFacebookF />
-                    <FaTwitter />
-                    <FaLinkedin />
-                </div>
-            </div>
-
-            <p className="text-sm mt-8 opacity-60">
-                2025 All Rights Reserved Pixelive co-workspace
+            {/* Address */}
+            <p className="mt-8 text-base sm:text-lg leading-relaxed font-normal max-w-md text-left md:text-left">
+              3rd Floor, Reliance Smart Bazaar Building, Bus Stop, Hosur Rd, opp. E City, Phase II, Bengaluru, Karnataka 560100
             </p>
-        </footer>
-    );
+          </div>
+        </div>
+
+        {/* Branding */}
+        <div className="mt-16 flex items-center justify-center relative">
+          <div className="text-[3rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] bg-gradient-to-b from-white to-black bg-clip-text text-transparent text-center font-bold leading-none w-full">
+            Pixalive
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Footer;

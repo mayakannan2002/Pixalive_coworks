@@ -11,7 +11,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/50 z-0"></div>
 
       {/* Header */}
-      <div className="relative z-10 flex justify-between items-center px-4 sm:px-6 py-4 max-w-[1280px] mx-auto">
+      <div className="relative z-10 flex justify-between items-center px-4 sm:px-11 py-4 max-w-[1280px] mx-auto">
         <img src={logo} alt="Logo" className="w-10 h-10" />
         <button className="bg-white text-black px-4 py-2  text-lg font-black hover:bg-gray-200 transition cursor-pointer">
           Let's talk ↗
@@ -19,7 +19,7 @@ const HeroSection = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 mt-20 sm:mt-23">
+      <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-10 mt-20 sm:mt-23">
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-light leading-[180%] sm:leading-snug md:leading-[180%]">
           Smart <span className="font-black italic  underline underline-offset-12">Workspaces.</span>
           <br />
@@ -34,7 +34,7 @@ const HeroSection = () => {
           around you. Modern desks, fast internet, and ready-to-use laptops.
         </p>
 
-        <div className="mt-13 sm:mt-8 flex flex-col  sm:flex-row sm:justify-between sm:items-center gap-4">
+        <div className="mt-7 sm:mt-8 flex flex-col  sm:flex-row sm:justify-between sm:items-center gap-4">
           <button className="bg-white text-black  px-6 py-2.5 w-46 sm:w-auto text-lg font-semibold  hover:bg-gray-200 transition cursor-pointer">
             Book a Space →
 
