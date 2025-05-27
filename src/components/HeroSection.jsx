@@ -28,7 +28,7 @@ const HeroSection = () => {
           Built for <span className="font-black italic underline underline-offset-12">Designers, Developers & Doers.</span>
         </h1>
 
-        <p className="text-sm sm:text-base md:text-lg mt-6 sm:mt-8 text-[#B0B0B0]">
+        <p className="text-sm sm:text-base md:text-lg mt-3 sm:mt-8 text-[#B0B0B0]">
           Whether you're a freelancer, a startup, or a remote team, we've built the perfect workspace
           <br className="hidden sm:block" />
           around you. Modern desks, fast internet, and ready-to-use laptops.
