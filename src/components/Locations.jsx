@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import image1 from './../assets/Gallery/gallery1.png';
 import image2 from './../assets/Gallery/gallery2.png';
 import image3 from './../assets/Gallery/gallery3.png';
@@ -7,7 +7,6 @@ import image5 from './../assets/Gallery/gallery5.png';
 import image6 from './../assets/Gallery/gallery6.png';
 
 const GalleryContinuation = () => {
-  const scrollRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
 
   const allImages = [
@@ -36,32 +35,27 @@ const GalleryContinuation = () => {
   };
 
   const columnGroups = generateColumnGroups(allImages);
-  const duplicatedGroups = [...columnGroups, ...columnGroups]; // Duplicate for looping
-
-  useEffect(() => {
-    let animationFrameId;
-    const container = scrollRef.current;
-
-    const scroll = () => {
-      if (container && !isPaused) {
-        container.scrollLeft += 3.5; // Adjust speed here
-
-        // Reset to start for continuous looping
-        if (container.scrollLeft >= container.scrollWidth / 2) {
-          container.scrollLeft = 0;
-        }
-      }
-
-      animationFrameId = requestAnimationFrame(scroll);
-    };
-
-    animationFrameId = requestAnimationFrame(scroll);
-
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [isPaused]);
+  const duplicatedGroups = [...columnGroups, ...columnGroups];
 
   return (
     <div className="bg-white py-10 px-4 sm:px-10 overflow-hidden">
+      {/* Animation styles inside the component */}
+      <style>{`
+        @keyframes scrollX {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .scroll-animation {
+          animation: scrollX 20s linear infinite;
+          display: flex;
+          gap: 1rem;
+          width: max-content;
+        }
+        .scroll-animation.paused {
+          animation-play-state: paused;
+        }
+      `}</style>
+
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
         <h2 className="text-sm font-medium mb-2 sm:mb-0">Gallery</h2>
@@ -71,37 +65,38 @@ const GalleryContinuation = () => {
         </p>
       </div>
 
-      {/* Scrollable Gallery */}
+      {/* Looping Gallery */}
       <div
-        ref={scrollRef}
-        className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth max-w-[1260px] mx-auto"
+        className="relative overflow-hidden max-w-[1260px] mx-auto"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        {duplicatedGroups.map((column, index) => (
-          <div
-            key={index}
-            className="flex flex-col justify-between gap-4 flex-shrink-0 w-[300px] h-[420px]"
-          >
-            {column.map((img, subIndex) => (
-              <div
-                key={subIndex}
-                className={`relative w-full overflow-hidden shadow-md group ${
-                  column.length === 2 ? 'h-1/2' : 'h-full'
-                }`}
-              >
-                <img
-                  src={img.src}
-                  alt={img.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <p className="text-white text-lg font-semibold">{img.title}</p>
+        <div className={`scroll-animation ${isPaused ? 'paused' : ''}`}>
+          {duplicatedGroups.map((column, index) => (
+            <div
+              key={index}
+              className="flex flex-col justify-between gap-4 flex-shrink-0 w-[300px] h-[420px]"
+            >
+              {column.map((img, subIndex) => (
+                <div
+                  key={subIndex}
+                  className={`relative w-full overflow-hidden shadow-md group ${
+                    column.length === 2 ? 'h-1/2' : 'h-full'
+                  }`}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <p className="text-white text-lg font-semibold">{img.title}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        ))}
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
