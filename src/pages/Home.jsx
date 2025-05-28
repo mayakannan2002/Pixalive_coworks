@@ -5,6 +5,7 @@ import MembershipSlider from "../components/MembershipSlider"
 import PlansAndPricing from "../components/PlansAndPricing"
 import PricingCards from "../components/PricingCards"
 import LaptopBookingSection from "../components/SecondHero"
+import TestimonialSlider from "../components/Testimonials"
 import WorkplaceIntro from "../components/WorkplaceIntro"
 
 export const Home = () => {
@@ -18,6 +19,7 @@ export const Home = () => {
         <PlansAndPricing  />
         <PricingCards />
         <Locations />
+        <TestimonialSlider/>
         
     </div>
   )
