@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import userImg from './../assets/home/logo.png';
 import userImg1 from './../assets/home/logo1.jpg';
 import userImg2 from './../assets/home/logo2.jpg';
+import siva from './../assets/home/siva.png';
 
 const testimonialData = [
   {
@@ -33,7 +34,7 @@ const testimonialData = [
   },
   {
     id: 4,
-    image: userImg,
+    image: siva,
     username: "Freelance Business",
     description:
       '"Pixalive Tech Coworks gave me the perfect environment to grow my freelance business. The community is vibrant, the support is solid, and having access to tech resources like laptop rentals made scaling my work so much easier."',

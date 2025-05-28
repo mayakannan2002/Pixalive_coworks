@@ -50,7 +50,7 @@ const FaqTabs = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div className="max-w-[1260px]  md:mt-26 mx-auto md:px-10 px-2 py-10">
+        <div className="max-w-[1280px]  md:mt-26 mx-auto md:px-10 px-2 py-10">
             <h2 className="text-sm md:text-lg font-medium text-black mb-15">
                 Why Pixalive tech Co-work?
             </h2>

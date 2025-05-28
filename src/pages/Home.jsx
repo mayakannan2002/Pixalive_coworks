@@ -1,10 +1,10 @@
 import FaqTabs from "../components/FaqTabs"
-import Footer from "../components/Footer"
 import HeroSection from "../components/HeroSection"
 import MembershipSlider from "../components/MembershipSlider"
 import PlansAndPricing from "../components/PlansAndPricing"
 import PricingCards from "../components/PricingCards"
 import LaptopBookingSection from "../components/SecondHero"
+import TestimonialSlider from "../components/Testimonials"
 import WorkplaceIntro from "../components/WorkplaceIntro"
 import TestimonialsSection from "../components/Testimonials"
 
@@ -18,9 +18,9 @@ export const Home = () => {
         <LaptopBookingSection />
         <PlansAndPricing  />
         <PricingCards />
+        <Locations />
+        <TestimonialSlider/>
         
-        <TestimonialsSection />
-        <Footer />
     </div>
   )
 }
