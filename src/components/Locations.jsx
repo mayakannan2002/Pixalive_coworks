@@ -1,88 +1,110 @@
-import React, { useState } from 'react';
-import location1 from '../assets/home/location1.png';
-import location2 from '../assets/home/location2.png';
+import React, { useEffect, useRef, useState } from 'react';
+import image1 from './../assets/Gallery/gallery1.png';
+import image2 from './../assets/Gallery/gallery2.png';
+import image3 from './../assets/Gallery/gallery3.png';
+import image4 from './../assets/Gallery/gallery4.png';
+import image5 from './../assets/Gallery/gallery5.png';
+import image6 from './../assets/Gallery/gallery6.png';
 
-const Locations = () => {
-  const [activeTab, setActiveTab] = useState(0);
+const GalleryContinuation = () => {
+  const scrollRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
 
-  const locations = [
-    {
-      img: location1,
-      alt: "Meeting Room",
-    },
-    {
-      img: location2,
-      alt: "Workspace Area",
-    },
+  const allImages = [
+    { src: image1, title: 'Hall Area' },
+    { src: image3, title: 'Nearby Metro' },
+    { src: image2, title: 'Cabin Area' },
+    { src: image4, title: 'Common Space' },
+    { src: image5, title: 'Reception' },
+    { src: image6, title: 'Office Overview' },
   ];
 
-  const address = `3rd Floor, Reliance Smart Bazaar Building, Bus Stop, Hosur Rd, opp. E City, Phase II,
-Bengaluru, Karnataka 560100`;
+  const generateColumnGroups = (images) => {
+    const columns = [];
+    let i = 0;
+    while (i < images.length) {
+      const group = [
+        images.slice(i, i + 2),
+        images.slice(i + 2, i + 3),
+        images.slice(i + 3, i + 5),
+        images.slice(i + 5, i + 6),
+      ];
+      columns.push(...group.filter(col => col.length > 0));
+      i += 6;
+    }
+    return columns;
+  };
+
+  const columnGroups = generateColumnGroups(allImages);
+  const duplicatedGroups = [...columnGroups, ...columnGroups]; // Duplicate for looping
+
+  useEffect(() => {
+    let animationFrameId;
+    const container = scrollRef.current;
+
+    const scroll = () => {
+      if (container && !isPaused) {
+        container.scrollLeft += 3.5; // Adjust speed here
+
+        // Reset to start for continuous looping
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+          container.scrollLeft = 0;
+        }
+      }
+
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    animationFrameId = requestAnimationFrame(scroll);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isPaused]);
 
   return (
-    <section className=" max-w-[1260px] mx-auto px-5 bg-white py-10 md:py-16 mb-20 mt-10">
-      <div className="max-w-[1250px] mx-auto px-4 md:px-0">
-        {/* Top Text Row */}
-        <div className="flex flex-col md:flex-row justify-between text-[16px] md:text-base text-black mb-6 md:mb-8">
-          <div className="leading-tight">
-            Choose Your <br />
-            <span className="font-medium">Pixalive co-workspace Location</span>
-          </div>
-          <div className="text-right leading-tight max-w-md mt-4 md:mt-0">
-            {address}
-          </div>
-        </div>
+    <div className="bg-white py-10 px-4 sm:px-10 overflow-hidden">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
+        <h2 className="text-sm font-medium mb-2 sm:mb-0">Gallery</h2>
+        <p className="text-[20px] sm:text-[30px] md:text-[40px] leading-[140%] font-semibold text-black text-center md:text-left max-w-[600px]">
+          A visual glimpse into our <br />shared workspace — where<br /> focus, collaboration,
+          and <br />creativity meet in calm <br />simplicity.
+        </p>
+      </div>
 
-        {/* Section Title */}
-        <h2 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-12 ml-0 md:ml-[25.3rem]">
-          Locations
-        </h2>
-
-        {/* MOBILE VIEW - Tabs + Single Image */}
-        <div className="md:hidden">
-          {/* Tabs */}
-          <div className="flex justify-center space-x-6 mb-6 border-b border-gray-300">
-            {locations.map((loc, idx) => (
-              <button
-                key={idx}
-                onClick={() => setActiveTab(idx)}
-                className={`pb-2 font-medium text-sm ${
-                  activeTab === idx
-                    ? 'border-b-2 border-gray-300 text-black'
-                    : 'text-gray-600 hover:text-black'
+      {/* Scrollable Gallery */}
+      <div
+        ref={scrollRef}
+        className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth max-w-[1260px] mx-auto"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        {duplicatedGroups.map((column, index) => (
+          <div
+            key={index}
+            className="flex flex-col justify-between gap-4 flex-shrink-0 w-[300px] h-[420px]"
+          >
+            {column.map((img, subIndex) => (
+              <div
+                key={subIndex}
+                className={`relative w-full overflow-hidden shadow-md group ${
+                  column.length === 2 ? 'h-1/2' : 'h-full'
                 }`}
               >
-                {loc.alt}
-              </button>
+                <img
+                  src={img.src}
+                  alt={img.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p className="text-white text-lg font-semibold">{img.title}</p>
+                </div>
+              </div>
             ))}
           </div>
-          {/* Active Image */}
-          <div className="w-full aspect-[4/3]">
-            <img
-              src={locations[activeTab].img}
-              alt={locations[activeTab].alt}
-              className="w-full h-full object-cover rounded-sm shadow"
-              loading="lazy"
-            />
-          </div>
-        </div>
-
-        {/* DESKTOP VIEW - Original Grid */}
-        <div className="hidden md:grid grid-cols-2 gap-6 ml-[25.3rem]">
-          {locations.map((loc, idx) => (
-            <div key={idx} className="aspect-[4/3] w-full">
-              <img
-                src={loc.img}
-                alt={loc.alt}
-                className="w-full h-full object-cover rounded-sm shadow"
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Locations;
+export default GalleryContinuation;

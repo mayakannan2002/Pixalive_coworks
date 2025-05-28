@@ -1,5 +1,4 @@
 import FaqTabs from "../components/FaqTabs"
-import Footer from "../components/Footer"
 import HeroSection from "../components/HeroSection"
 import Locations from "../components/Locations"
 import MembershipSlider from "../components/MembershipSlider"
@@ -19,7 +18,7 @@ export const Home = () => {
         <PlansAndPricing  />
         <PricingCards />
         <Locations />
-        <Footer />
+        
     </div>
   )
 }
