@@ -112,7 +112,7 @@ export default function TestimonialSlider() {
           {testimonialData.map((item) => (
             <div
               key={item.id}
-              className="flex-shrink-0 w-[90vw] sm:w-[70vw] md:w-[50vw] lg:w-[32%] bg-white border border-gray-200 shadow-md rounded-lg px-6 py-6"
+              className="flex-shrink-0 w-[90vw] sm:w-[70vw] md:w-[50vw] lg:w-[32%] bg-white border border-gray-200 shadow-md  px-6 py-6"
               style={{ scrollSnapAlign: "start" }}
             >
               <div className="flex flex-col h-full">

@@ -6,7 +6,7 @@ import PricingCards from "../components/PricingCards"
 import LaptopBookingSection from "../components/SecondHero"
 import TestimonialSlider from "../components/Testimonials"
 import WorkplaceIntro from "../components/WorkplaceIntro"
-import TestimonialsSection from "../components/Testimonials"
+import Locations from "../components/Locations"
 
 export const Home = () => {
   return (
