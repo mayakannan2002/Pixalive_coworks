@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Links } from 'react-router-dom';
 
 const pricingOptions = [
   {
@@ -84,9 +85,11 @@ const PricingCards = () => {
                 ))}
               </ul>
             </div>
+            <Link to="/contact">
             <button className="mt-6 bg-black cursor-pointer text-white w-full py-2 rounded hover:bg-white hover:text-black hover:border">
               Book a Space
             </button>
+          </Link>
           </div>
         ))}
       </div>
