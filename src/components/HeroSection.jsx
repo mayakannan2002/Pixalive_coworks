@@ -25,7 +25,7 @@ const HeroSection = () => {
           <br />
           Seamless <span className="font-black italic underline underline-offset-12">Tools.</span>
           <br />
-          Built for <span className="font-black italic underline underline-offset-12">Designers, Developers & Doers.</span>
+          Built for <span className="font-black italic  underline underline-offset-12">Designers, Developers & Doers.</span>
         </h1>
 
         <p className="text-md sm:text-base md:text-lg mt-6 sm:mt-8 text-[#B0B0B0]">

@@ -7,6 +7,7 @@ import PlansAndPricing from "../components/PlansAndPricing"
 import PricingCards from "../components/PricingCards"
 import LaptopBookingSection from "../components/SecondHero"
 import WorkplaceIntro from "../components/WorkplaceIntro"
+import TestimonialsSection from "../components/Testimonials"
 
 export const Home = () => {
   return (
@@ -19,6 +20,7 @@ export const Home = () => {
         <PlansAndPricing  />
         <PricingCards />
         <Locations />
+        <TestimonialsSection />
         <Footer />
     </div>
   )
