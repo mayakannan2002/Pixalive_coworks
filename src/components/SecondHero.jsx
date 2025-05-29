@@ -6,6 +6,7 @@ const LaptopBookingSection = () => {
   return (
     <section
       className="relative w-full min-h-[600px] md:min-h-[900px] bg-cover bg-center font-lufga flex justify-center items-center "
+      loading="lazy"
       style={{
         backgroundImage: `url(${BG1})`,
       }}

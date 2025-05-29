@@ -38,7 +38,7 @@ const GalleryContinuation = () => {
   const duplicatedGroups = [...columnGroups, ...columnGroups];
 
   return (
-    <div className="bg-white py-10 px-4 sm:px-10 overflow-hidden">
+    <div className=" py-10 px-4 sm:px-10 overflow-hidden">
       {/* Animation styles inside the component */}
       <style>{`
         @keyframes scrollX {
@@ -57,17 +57,18 @@ const GalleryContinuation = () => {
       `}</style>
 
       {/* Header */}
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
-        <h2 className="text-sm font-medium mb-2 sm:mb-0">Gallery</h2>
-        <p className="text-[20px] sm:text-[30px] md:text-[40px] leading-[140%] font-semibold text-black text-center md:text-left max-w-[600px]">
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start items-center justify-center text-center mb-8 gap-y-6 sm:gap-y-0">
+        <h2 className="text-md font-medium mb-2 sm:mb-0 sm:mr-4">Gallery</h2>
+        <p className="text-[20px] sm:text-[30px] md:text-[40px] leading-[140%] font-semibold text-black sm:text-left max-w-[600px]">
           A visual glimpse into our <br />shared workspace — where<br /> focus, collaboration,
           and <br />creativity meet in calm <br />simplicity.
         </p>
-      </div>
+    </div>
+
 
       {/* Looping Gallery */}
       <div
-        className="relative overflow-hidden max-w-[1260px] mx-auto"
+        className="relative overflow-hidden max-w-[1240px] mx-auto"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
@@ -88,6 +89,7 @@ const GalleryContinuation = () => {
                     src={img.src}
                     alt={img.title}
                     className="w-full h-full object-cover"
+                    loading='lazy'
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                     <p className="text-white text-lg font-semibold">{img.title}</p>
