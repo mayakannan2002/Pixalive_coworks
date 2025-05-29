@@ -138,7 +138,7 @@ const Contact = () => {
                     GET IN TOUCH <br className="hidden sm:block" /> WITH US
                 </h2>
                 <div className="text-[36px] sm:text-[44px] font-normal mt-4 md:mt-0">
-                    S-F <span className="text-[24px] sm:text-[30px]">©</span> 2025
+                    S-F <span className="text-[24px] sm:text-[30px]">@</span> 2025
                 </div>
             </div>
 
