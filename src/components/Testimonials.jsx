@@ -83,59 +83,64 @@ export default function TestimonialSlider() {
   }, []);
 
   return (
-    <div className="bg-white py-16 px-4 md:px-12 lg:px-24 xl:px-32">
-      {/* Header Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-[1260px] mx-auto mb-16 px-2 sm:px-4 md:px-0">
-        <div className="w-full md:w-1/3 text-center md:text-left">
-          <p className="text-lg sm:text-xl text-black font-medium leading-snug">
+    <>
+      {/* Top Text Section */}
+      <section className="max-w-[1260px] mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6 px-4 sm:px-6 md:px-8 mt-[80px] md:mt-[140px] mb-[80px]">
+        {/* Left small heading */}
+        <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+          <p className="text-[16px] sm:text-[18px] text-black text-center md:text-left leading-tight">
             Loved by the People<br />Who Work Here
           </p>
         </div>
-        <div className="w-full md:w-2/3">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black leading-snug text-center md:text-left">
+
+        {/* Right main heading */}
+        <div className="w-full md:w-2/3 flex justify-center md:justify-end">
+          <h1 className="text-[20px] sm:text-[30px] md:text-[40px] leading-[140%] font-semibold text-black text-center md:text-left max-w-[600px]">
             Our members say it best. <br />
             Dive into their experiences <br />
             and discover why Pixalive <br />
             isn’t just a co-working space — <br />
             it’s a thriving community.
-          </h2>
+          </h1>
         </div>
-      </div>
+      </section>
 
-      {/* Slider Section */}
-      <div className="overflow-hidden">
-        <div
-          ref={containerRef}
-          className="flex gap-6 overflow-x-scroll scroll-smooth scrollbar-hide px-2"
-          style={{ scrollSnapType: "x mandatory" }}
-        >
-          {testimonialData.map((item) => (
-            <div
-              key={item.id}
-              className="flex-shrink-0 w-[90vw] sm:w-[70vw] md:w-[50vw] lg:w-[32%] bg-white border border-gray-200 shadow-md rounded-lg px-6 py-6"
-              style={{ scrollSnapAlign: "start" }}
-            >
-              <div className="flex flex-col h-full">
-                <img
-                  src={item.image}
-                  alt="user"
-                  className="w-12 h-12 rounded-md mb-4 object-cover"
-                />
-                <h3 className="text-black font-semibold text-md mb-2">
-                  {item.username}
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed mb-6">
-                  {item.description}
-                </p>
-                <div className="mt-auto">
-                  <p className="text-black font-semibold">{item.name}</p>
-                  <p className="text-gray-500 text-sm">{item.role}</p>
+      {/* Testimonial Slider Section */}
+      <section className="w-full bg-white py-10">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
+          <div
+            ref={containerRef}
+            className="flex gap-6 overflow-x-scroll scroll-smooth scrollbar-hide"
+            style={{ scrollSnapType: "x mandatory" }}
+          >
+            {testimonialData.map((item) => (
+              <div
+                key={item.id}
+                className="flex-shrink-0 w-[90vw] sm:w-[70vw] md:w-[50vw] lg:w-[32%] bg-white border border-gray-200 shadow-md  px-6 py-6"
+                style={{ scrollSnapAlign: "start" }}
+              >
+                <div className="flex flex-col h-full">
+                  <img
+                    src={item.image}
+                    alt="user"
+                    className="w-12 h-12 mb-4 object-cover"
+                  />
+                  <h3 className="text-black font-semibold text-md mb-2">
+                    {item.username}
+                  </h3>
+                  <p className="text-gray-700 text-sm leading-relaxed mb-6">
+                    {item.description}
+                  </p>
+                  <div className="mt-auto">
+                    <p className="text-black font-semibold">{item.name}</p>
+                    <p className="text-gray-500 text-sm">{item.role}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
