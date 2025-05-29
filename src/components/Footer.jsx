@@ -3,8 +3,8 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/
 
 const Footer = () => {
   return (
-    <div className="bg-black  max-w-[1280px] px-6 md:px-14 py-10 overflow-hidden relative">
-      <div className="w-full max-w-[1280px] mx-auto text-white">
+    <div className="bg-black px-6 md:px-16 py-10 overflow-hidden relative">
+      <div className="w-full max-w-7xl mx-auto text-white">
         <div className="flex flex-col md:flex-row justify-between gap-10 text-sm">
           
           {/* Left Section */}
