@@ -1,89 +1,101 @@
 import React from "react";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import Logo from "../../assets/imgs/home/logo.png";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white px-6 md:px-16 pt-20 pb-40 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-        
-        {/* LEFT SECTION */}
-        <div className="flex flex-col gap-5">
-          <img src={Logo} alt="Pixalive Logo" className="h-8 w-8" />
+    <div className="bg-black px-6 md:px-16 py-10 overflow-hidden relative">
+      <div className="w-full max-w-7xl mx-auto text-white">
+        <div className="flex flex-col md:flex-row justify-between gap-10 text-sm">
 
-          <p className="text-sm leading-relaxed max-w-xs">
-            From bold ideas to real-world tech—<br />
-            Pixalive is where innovation comes alive.
-          </p>
+          {/* Left Section */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-2xl sm:text-3xl font-normal mt-4 mb-6 text-left">
+              Let's work Together
+            </h2>
 
-          <a
-            href="mailto:contact@pixalivetech.com"
-            className="text-sm inline-flex items-center gap-1 hover:underline"
-          >
-            contact@pixalivetech.com <FaArrowUpRightFromSquare size={10} />
-          </a>
-
-          <span className="text-sm">+91 87785 84566</span>
-        </div>
-
-        {/* MIDDLE LINKS SECTION */}
-        <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm">
-          <div className="flex flex-col gap-2">
-            <a href="/" className="hover:underline">Home</a>
-            <a href="/services" className="hover:underline">Service's</a>
-            <a href="/products" className="hover:underline">Products</a>
-            <a href="/features" className="hover:underline">Features</a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=pixalivetech@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-2 text-base sm:text-lg cursor-pointer hover:underline block text-left"
+            >
+              contact@pixalivetech.com
+            </a>
+            <a
+              href="https://wa.me/918778584566"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-2 text-base sm:text-lg cursor-pointer hover:underline block text-left"
+            >
+              +91 87785 84566
+            </a>
           </div>
-          <div className="flex flex-col gap-2">
-            <a href="/pricing" className="hover:underline">Pricing</a>
-            <a href="/hire-us" className="hover:underline">Hire Us</a>
-            <a href="/about" className="hover:underline">About us</a>
+
+          {/* Right Section */}
+          <div className="w-full md:w-1/2 flex flex-col items-start md:items-end">
+            <div className="w-full max-w-md text-base sm:text-lg grid grid-cols-2 gap-6">
+
+              {/* Social Links */}
+              <div className="flex flex-col items-start gap-2">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61572736722664"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2 hover:underline cursor-pointer"
+                >
+                  Facebook
+                  <FaFacebookF />
+                </a>
+                <a
+                  href="https://www.instagram.com/pixalivetech/?next=%2F"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2 hover:underline cursor-pointer"
+                >
+                  Instagram
+                  <FaInstagram />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/pixalive-technology-network/?viewAsMember=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2 hover:underline cursor-pointer"
+                >
+                  LinkedIn
+                  <FaLinkedinIn />
+                </a>
+                <a
+                  href="https://x.com/Pixalivetech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2 hover:underline cursor-pointer"
+                >
+                  Twitter
+                  <FaXTwitter />
+                </a>
+              </div>
+            </div>
+
+            {/* Address */}
+            <p className="mt-8 text-base sm:text-lg leading-relaxed font-normal max-w-md text-left md:text-left">
+              3rd Floor, Reliance Smart Bazaar Building, Bus Stop, Hosur Rd, opp. E City, Phase II, Bengaluru, Karnataka 560100
+            </p>
           </div>
         </div>
 
-        {/* SOCIAL LINKS SECTION */}
-        <div className="flex flex-col gap-2 text-sm">
-          <a
-             href="https://www.linkedin.com/company/pixalive-technology-network/?viewAsMember=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:underline"
-          >
-            LinkedIn <FaArrowUpRightFromSquare size={10} />
-          </a>
-          <a
-            href="https://www.instagram.com/pixalivetech/?next=%2F"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:underline"
-          >
-            Instagram <FaArrowUpRightFromSquare size={10} />
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61572736722664"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:underline"
-          >
-            Facebook <FaArrowUpRightFromSquare size={10} />
-          </a>
+        {/* Branding */}
+        <div className="mt-2 sm:mt-0 p-0 flex items-center justify-center relative">
+          <div className="text-[3rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] bg-gradient-to-b from-white to-black bg-clip-text text-transparent text-center font-bold leading-none w-full m-0 p-0">
+            Pixalive
+          </div>
         </div>
       </div>
-
-      {/* BOTTOM BAR */}
-      <div className="max-w-7xl mx-auto mt-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-gray-400">
-        <p>© 2025 Pixalive Technology Services. All rights reserved.</p>
-        <div className="flex gap-6">
-          <a href="/terms" className="hover:underline">Terms of Use</a>
-          <a href="/privacy" className="hover:underline">Privacy Policy</a>
-        </div>
-      </div>
-
-      {/* BIG PIXALIVE TEXT */}
-      <div className="absolute -bottom-20 left-0 w-full text-white font-extrabold text-[22vw] leading-none pointer-events-none select-none z-[-1] tracking-tighter">
-        <span className="block text-left pl-6 md:pl-16">Pixalive</span>
-      </div>
-    </footer>
+    </div>
   );
 };
 
