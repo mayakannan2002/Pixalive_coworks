@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import userImg from './../assets/home/logo.png';
-import userImg1 from './../assets/home/logo1.jpg';
-import userImg2 from './../assets/home/logo2.jpg';
-import siva from './../assets/home/siva.png';
+import userImg1 from './../assets/home/Ellipse 2052.png';
+import userImg2 from './../assets/home/Ellipse 2053.png';
+import siva from './../assets/home/Ellipse 2054.png';
 
 const testimonialData = [
   {
