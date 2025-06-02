@@ -1,12 +1,17 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <div className="bg-black px-6 md:px-16 py-10 overflow-hidden relative">
       <div className="w-full max-w-7xl mx-auto text-white">
         <div className="flex flex-col md:flex-row justify-between gap-10 text-sm">
-          
+
           {/* Left Section */}
           <div className="w-full md:w-1/2">
             <h2 className="text-2xl sm:text-3xl font-normal mt-4 mb-6 text-left">
@@ -34,11 +39,8 @@ const Footer = () => {
           {/* Right Section */}
           <div className="w-full md:w-1/2 flex flex-col items-start md:items-end">
             <div className="w-full max-w-md text-base sm:text-lg grid grid-cols-2 gap-6">
-              
-              {/* Navigation */}
-              
 
-              {/* Social Links with icons and animated arrow */}
+              {/* Social Links */}
               <div className="flex flex-col items-start gap-2">
                 <a
                   href="https://www.facebook.com/profile.php?id=61572736722664"
@@ -46,7 +48,6 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="group flex items-center gap-2 hover:underline cursor-pointer"
                 >
-                  
                   Facebook
                   <FaFacebookF />
                 </a>
@@ -57,8 +58,7 @@ const Footer = () => {
                   className="group flex items-center gap-2 hover:underline cursor-pointer"
                 >
                   Instagram
-                                    <FaInstagram />
-
+                  <FaInstagram />
                 </a>
                 <a
                   href="https://www.linkedin.com/company/pixalive-technology-network/?viewAsMember=true"
@@ -67,8 +67,7 @@ const Footer = () => {
                   className="group flex items-center gap-2 hover:underline cursor-pointer"
                 >
                   LinkedIn
-                                    <FaLinkedinIn />
-
+                  <FaLinkedinIn />
                 </a>
                 <a
                   href="https://x.com/Pixalivetech"
@@ -77,8 +76,7 @@ const Footer = () => {
                   className="group flex items-center gap-2 hover:underline cursor-pointer"
                 >
                   Twitter
-                                    <FaXTwitter />
-
+                  <FaXTwitter />
                 </a>
               </div>
             </div>
@@ -91,8 +89,8 @@ const Footer = () => {
         </div>
 
         {/* Branding */}
-        <div className="mt-16 flex items-center justify-center relative">
-          <div className="text-[3rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] bg-gradient-to-b from-white to-black bg-clip-text text-transparent text-center font-bold leading-none w-full">
+        <div className="mt-2 sm:mt-0 p-0 flex items-center justify-center relative">
+          <div className="text-[3rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] bg-gradient-to-b from-white to-black bg-clip-text text-transparent text-center font-bold leading-none w-full m-0 p-0">
             Pixalive
           </div>
         </div>

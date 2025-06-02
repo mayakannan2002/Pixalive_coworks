@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import userImg from './../assets/home/logo.png';
-import userImg1 from './../assets/home/logo1.jpg';
-import userImg2 from './../assets/home/logo2.jpg';
-import siva from './../assets/home/siva.png';
+import userImg1 from './../assets/home/Ellipse 2052.png';
+import userImg2 from './../assets/home/Ellipse 2053.png';
+import siva from './../assets/home/Ellipse 2054.png';
 
 const testimonialData = [
   {
@@ -99,7 +99,7 @@ export default function TestimonialSlider() {
             Our members say it best. <br />
             Dive into their experiences <br />
             and discover why Pixalive <br />
-            isn’t just a co-working space — <br />
+            isn’t just a co-working space <br />- 
             it’s a thriving community.
           </h1>
         </div>
@@ -107,7 +107,7 @@ export default function TestimonialSlider() {
 
       {/* Testimonial Slider Section */}
       <section className="w-full bg-white py-10">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
+        <div className="max-w-[1250px] mx-auto px-4 sm:px-6 md:px-8">
           <div
             ref={containerRef}
             className="flex gap-6 overflow-x-scroll scroll-smooth scrollbar-hide"

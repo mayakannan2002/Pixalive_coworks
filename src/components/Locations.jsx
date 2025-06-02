@@ -56,14 +56,36 @@ const GalleryContinuation = () => {
         }
       `}</style>
 
+     
+
+       <section className="max-w-[1260px] mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6 px-4 sm:px-6 md:px-8 mt-[80px] md:mt-[140px] mb-[80px]">
+       
+            {/* Left small heading */}
+            <div className="w-full md:w-/3 flex justify-center md:justify-start">
+                <p className="text-[16px] sm:text-[18px] text-black text-center md:text-left leading-tight">Gallery
+                </p>
+            </div>
+
+            {/* Right main heading */}
+            <div className="w-full md:w-2/3 flex justify-center md:justify-end">
+                <h1 className="text-[20px] sm:text-[30px] md:text-[40px] leading-[140%] font-semibold text-black text-center md:text-left max-w-[600px]">
+                     A visual glimpse into our 
+                    shared workspace - where
+                    focus, collaboration,and
+                    creativity meet in calm
+                    simplicity.                </h1>
+            </div>
+
+        </section>
+
       {/* Header */}
-    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start items-center justify-center text-center mb-8 gap-y-6 sm:gap-y-0">
-        <h2 className="text-md font-medium mb-2 sm:mb-0 sm:mr-4">Gallery</h2>
-        <p className="text-[20px] sm:text-[30px] md:text-[40px] leading-[140%] font-semibold text-black sm:text-left max-w-[600px]">
+    {/* <div className="  max-w-[1260px]  flex flex-col sm:flex-row sm:justify-between sm:items-start items-center justify-center text-center mb-8 gap-y-6 sm:gap-y-0">
+        <h2 className=" max-w-[1260px] text-md font-medium mb-2 sm:mb-0 sm:mr-4">Gallery</h2>
+        <p className=" max-w-[1260px] text-[20px] sm:text-[30px] md:text-[40px] leading-[140%] font-semibold text-black sm:text-left">
           A visual glimpse into our <br />shared workspace — where<br /> focus, collaboration,
           and <br />creativity meet in calm <br />simplicity.
         </p>
-    </div>
+    </div> */}
 
 
       {/* Looping Gallery */}
