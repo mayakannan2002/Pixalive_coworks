@@ -105,40 +105,42 @@ export default function TestimonialSlider() {
         </div>
       </section>
 
-      {/* Slider Section */}
-      <div className="overflow-hidden">
-        <div
-          ref={containerRef}
-          className="flex gap-6 overflow-x-scroll scroll-smooth scrollbar-hide px-2"
-          style={{ scrollSnapType: "x mandatory" }}
-        >
-          {testimonialData.map((item) => (
-            <div
-              key={item.id}
-              className="flex-shrink-0 w-[90vw] sm:w-[70vw] md:w-[50vw] lg:w-[32%] bg-white border border-gray-200 shadow-md rounded-lg px-6 py-6"
-              style={{ scrollSnapAlign: "start" }}
-            >
-              <div className="flex flex-col h-full">
-                <img
-                  src={item.image}
-                  alt="user"
-                  className="w-12 h-12 rounded-md mb-4 object-cover"
-                />
-                <h3 className="text-black font-semibold text-md mb-2">
-                  {item.username}
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed mb-6">
-                  {item.description}
-                </p>
-                <div className="mt-auto">
-                  <p className="text-black font-semibold">{item.name}</p>
-                  <p className="text-gray-500 text-sm">{item.role}</p>
+      {/* Testimonial Slider Section */}
+      <section className="w-full bg-white py-10">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
+          <div
+            ref={containerRef}
+            className="flex gap-6 overflow-x-scroll scroll-smooth scrollbar-hide"
+            style={{ scrollSnapType: "x mandatory" }}
+          >
+            {testimonialData.map((item) => (
+              <div
+                key={item.id}
+                className="flex-shrink-0 w-[90vw] sm:w-[70vw] md:w-[50vw] lg:w-[32%] bg-white border border-gray-200 shadow-md  px-6 py-6"
+                style={{ scrollSnapAlign: "start" }}
+              >
+                <div className="flex flex-col h-full">
+                  <img
+                    src={item.image}
+                    alt="user"
+                    className="w-12 h-12 mb-4 object-cover"
+                  />
+                  <h3 className="text-black font-semibold text-md mb-2">
+                    {item.username}
+                  </h3>
+                  <p className="text-gray-700 text-sm leading-relaxed mb-6">
+                    {item.description}
+                  </p>
+                  <div className="mt-auto">
+                    <p className="text-black font-semibold">{item.name}</p>
+                    <p className="text-gray-500 text-sm">{item.role}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
-  );
+      </section>
+    </>
+  );
 }
