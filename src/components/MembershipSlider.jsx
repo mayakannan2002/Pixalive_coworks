@@ -76,11 +76,11 @@ const MembershipSlider = () => {
   }, []);
 
   return (
-    <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-12">
-      <h2 className="text-[18px] sm:text-2xl font-medium mb-6">
+    <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-12 py-12">
+      <h2 className="text-m">
         Discover Our Membership <br className="hidden sm:block" /> Plans
       </h2>
-
+<br />
       {/* Horizontal scroll container with padding and spacing */}
       <div className="overflow-hidden">
         <div

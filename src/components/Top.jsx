@@ -37,10 +37,10 @@ const Top = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+          
           cursor: 'pointer',
           zIndex: 1000,
-          transition: 'background 0.3s ease',
+          
         }}
       >
         <svg

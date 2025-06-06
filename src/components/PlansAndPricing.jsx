@@ -2,7 +2,7 @@ import React from 'react';
 
 const PlansAndPricing = () => {
   return (
-    <section className="py-12 px-12 flex justify-center">
+    <section className="pt-26 pb-16 px-4 md:px-12 flex justify-center">
       <div className="max-w-[1280px] w-full flex flex-col md:flex-row gap-12">
         {/* Left Label */}
         <div className="md:w-1/2">

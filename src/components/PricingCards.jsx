@@ -66,7 +66,7 @@ const pricingOptions = [
 
 const PricingCards = () => {
   return (
-    <div className="px-6 pb-22 md:px-12 max-w-[1280px] mx-auto">
+    <div className="px-4 pb-22 md:px-12 max-w-[1280px] mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         {pricingOptions.map((option, idx) => (
           <div
@@ -86,7 +86,7 @@ const PricingCards = () => {
               </ul>
             </div>
             <Link to="/contact">
-              <button className="mt-6 bg-black cursor-pointer text-white w-full py-2 rounded hover:bg-white hover:text-black hover:border">
+              <button className="mt-6 bg-black cursor-pointer text-white w-full py-2 hover:bg-white hover:text-black hover:border">
                 Book a Space
               </button>
             </Link>

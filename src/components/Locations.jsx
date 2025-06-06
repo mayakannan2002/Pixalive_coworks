@@ -38,7 +38,7 @@ const GalleryContinuation = () => {
   const duplicatedGroups = [...columnGroups, ...columnGroups];
 
   return (
-    <section className="py-16 px-12 md:px-12">
+    <section className="py-16 px-4 md:px-12">
       {/* Scroll animation styles */}
       <style>{`
         @keyframes scrollX {
@@ -70,7 +70,7 @@ const GalleryContinuation = () => {
 
       {/* Looping Gallery Section */}
       <div
-        className="relative overflow-hidden max-w-[1240px] mx-auto"
+        className="relative overflow-hidden mx-auto"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >

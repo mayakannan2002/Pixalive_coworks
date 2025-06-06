@@ -13,7 +13,7 @@ const LaptopBookingSection = () => {
     >
       <div className="absolute inset-0 bg-black/50 z-0" />
       
-      <div className="relative z-10 w-full max-w-[1260px] px-4 sm:px-6 lg:px-8 text-white">
+      <div className="relative z-10 w-full max-w-[1280px] px-4 md:px-12 text-white">
         <div className="py-12 sm:py-16 md:py-24 lg:py-32">
           <h2 className="text-base sm:text-lg md:text-xl font-semibold text-[#B0B0B0]">
             Laptop Rental
