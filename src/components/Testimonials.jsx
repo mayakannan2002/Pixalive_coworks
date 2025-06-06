@@ -85,32 +85,27 @@ export default function TestimonialSlider() {
   return (
     <>
       {/* Top Text Section */}
-      <section className="max-w-[1260px] mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6 px-4 sm:px-6 md:px-8 mt-[80px] md:mt-[140px] mb-[80px]">
-        {/* Left small heading */}
-        <div className="w-full md:w-1/3 flex justify-center md:justify-start">
-          <p className="text-[16px] sm:text-[18px] text-black text-center md:text-left leading-tight">
-            Loved by the People<br />Who Work Here
-          </p>
+    <section className="py-12 px-12 flex justify-center">
+      <div className="max-w-[1280px] w-full flex flex-col md:flex-row gap-12">
+        {/* Left Label */}
+        <div className="md:w-1/2">
+          <p className="text-m text-black">Loved by the People <br /> Who Work Here</p>
         </div>
 
-        {/* Right main heading */}
-        <div className="w-full md:w-2/3 flex justify-center md:justify-end">
-          <h1 className="text-[20px] sm:text-[30px] md:text-[40px] leading-[140%] font-semibold text-black text-center md:text-left max-w-[600px]">
-            Our members say it best. <br />
-            Dive into their experiences <br />
-            and discover why Pixalive <br />
-            isn’t just a co-working space <br />- 
-            it’s a thriving community.
-          </h1>
-        </div>
-      </section>
+        {/* Right Text */}
+        <div className="md:w-2/2 max-w-[500px]">
+          <p className="text-xl md:text-[28px] md:text-2xl font-semibold text-black leading-relaxed">
+           Our members say it best. Dive into their experiences and discover why Pixalive isn’t just a co-working space — it’s a thriving community.
+           </p>
+           </div>
+      </div>
+    </section>
 
       {/* Testimonial Slider Section */}
-      <section className="w-full bg-white py-10">
-        <div className="max-w-[1250px] mx-auto px-4 sm:px-6 md:px-8">
+
           <div
             ref={containerRef}
-            className="flex gap-6 overflow-x-scroll scroll-smooth scrollbar-hide"
+            className="flex gap-6 overflow-x-scroll scroll-smooth scrollbar-hide "
             style={{ scrollSnapType: "x mandatory" }}
           >
             {testimonialData.map((item) => (
@@ -139,8 +134,7 @@ export default function TestimonialSlider() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Links } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const pricingOptions = [
   {
@@ -66,12 +66,12 @@ const pricingOptions = [
 
 const PricingCards = () => {
   return (
-    <div className="px-4 py-10 max-w-[1240px] mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="px-6 pb-22 md:px-12 max-w-[1280px] mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         {pricingOptions.map((option, idx) => (
           <div
             key={idx}
-            className="border border-gray-300 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-shadow bg-white  w-full h-full min-h-[370px]"
+            className="border border-gray-300 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-shadow bg-white w-full h-full min-h-[420px]"
           >
             <div>
               <h3 className="text-[22px] md:text-[26px] font-semibold mb-2">{option.title}</h3>
@@ -86,10 +86,10 @@ const PricingCards = () => {
               </ul>
             </div>
             <Link to="/contact">
-            <button className="mt-6 bg-black cursor-pointer text-white w-full py-2 rounded hover:bg-white hover:text-black hover:border">
-              Book a Space
-            </button>
-          </Link>
+              <button className="mt-6 bg-black cursor-pointer text-white w-full py-2 rounded hover:bg-white hover:text-black hover:border">
+                Book a Space
+              </button>
+            </Link>
           </div>
         ))}
       </div>
