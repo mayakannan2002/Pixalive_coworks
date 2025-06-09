@@ -1,6 +1,7 @@
 import React from "react";
 import BG1 from "../../src/assets/home/bg1.png";
 import { ArrowRight } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const LaptopBookingSection = () => {
   return (
@@ -34,12 +35,14 @@ const LaptopBookingSection = () => {
           </p>
 
           <div className="mt-8 sm:mt-10">
+            <Link to='/contact'>
             <button className="group bg-white cursor-pointer mt-20 text-black px-6 py-3 font-semibold hover:bg-gray-200 transition">
   Book your laptop
   <span className="inline-block ml-2 transform transition-transform duration-300 group-hover:translate-x-1">
     →
   </span>
 </button>
+</Link>
 
           </div>
         </div>
