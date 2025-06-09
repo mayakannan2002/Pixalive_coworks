@@ -19,7 +19,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/50 z-0"></div>
 
       {/* Header */}
-      <div className="relative z-10 flex justify-between items-center py- max-w-[1280px] px-12 mx-auto">
+      <div className="relative z-10 flex justify-between items-center py-16 max-w-[1280px] px-4 md-px-12 mx-auto">
         <img src={logo} alt="Logo" className="w-10 h-10" loading="lazy" />
         <Link to="/contact">
           <button className="group bg-white text-black font-black text-lg px-4 py-2 transition hover:bg-gray-200">
