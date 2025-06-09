@@ -22,8 +22,9 @@ const HeroSection = () => {
       <div className="relative z-10 flex justify-between items-center py-4 max-w-[1280px] px-12 mx-auto">
         <img src={logo} alt="Logo" className="w-10 h-10" loading="lazy" />
         <Link to="/contact">
-          <button className="bg-white text-black px-4 py-2 text-lg font-black hover:bg-gray-200 transition cursor-pointer">
-            Let's talk <span className="inline-block ml-2 transform transition-transform duration-300 group-hover:translate-x-1"> ↗ </span>
+          <button className="group bg-white text-black font-black text-lg px-4 py-2 transition hover:bg-gray-200">
+            Let's talk
+            <span className="ml-2 inline-block transform transition-transform duration-300 group-hover:translate-x-1">↗</span>
           </button>
         </Link>
       </div>
