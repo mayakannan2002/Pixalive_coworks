@@ -20,9 +20,9 @@ const HeroSection = () => {
 
       {/* Header */}
       <div className="relative z-10 flex justify-between items-center py-4 max-w-[1280px] px-4 md:px-12 mx-auto">
-        <img src={logo} alt="Logo" className="w-10 h-10" loading="lazy" />
+        <img src={logo} alt="Logo" className="w-10 h-10 cursor-pointer" loading="lazy" />
         <Link to="/contact">
-          <button className="group bg-white text-black font-black text-lg px-4 py-2 transition hover:bg-gray-200">
+          <button className="group bg-white text-black cursor-pointer font-black text-lg px-4 py-2 transition hover:bg-gray-200">
             Let's talk
             <span className="ml-2 inline-block transform transition-transform duration-300 group-hover:translate-x-1">↗</span>
           </button>
@@ -49,7 +49,7 @@ const HeroSection = () => {
         <div className="mt-7 sm:mt-8 flex flex-col sm:flex-row sm:justify-between gap-4">
           {/* Book a Space Button */}
           <Link to="/contact" className="w-full sm:w-[250px]">
-            <button className="w-full bg-white text-black px-4 py-2.5 text-lg font-semibold transition duration-300 hover:bg-gray-200 group">
+            <button className="w-full bg-white cursor-pointer text-black px-4 py-2.5 text-lg font-semibold transition duration-300 hover:bg-gray-200 group">
               Book a Space
               <span className="ml-2 inline-block transform transition-transform duration-300 group-hover:translate-x-1">→</span>
             </button>
@@ -58,7 +58,7 @@ const HeroSection = () => {
           {/* Scroll Down Button */}
           <button
             onClick={handleScroll}
-            className="w-full sm:w-[250px] group flex justify-center items-center border border-white px-4 py-2 text-white transition duration-300 hover:bg-white/20"
+            className="w-full sm:w-[250px] group cursor-pointer flex justify-center items-center border border-white px-4 py-2 text-white transition duration-300 hover:bg-white/20"
           >
             Scroll Down
             <span className="ml-2 inline-block transform transition-transform duration-300 group-hover:translate-y-1">↓</span>
