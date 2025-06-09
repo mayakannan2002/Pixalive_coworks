@@ -84,12 +84,12 @@ const PricingCards = () => {
                   <li key={i}>• {feature}</li>
                 ))}
               </ul>
-            </div>
+            <div></div>
             <Link to="/contact">
               <button className="mt-6 bg-black cursor-pointer text-white w-full py-2 hover:bg-white hover:text-black hover:border">
                 Book a Space
               </button>
-            </Link>
+            </Link></div>
           </div>
         ))}
       </div>

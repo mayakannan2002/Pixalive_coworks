@@ -34,11 +34,13 @@ const LaptopBookingSection = () => {
           </p>
 
           <div className="mt-8 sm:mt-10">
-            <button className="bg-white cursor-pointer mt-20 text-black px-6 py-3 font-semibold  hover:bg-gray-200 transition">
-              Book your laptop <span className="inline-block ml-2 transform transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-            </button>
+            <button className="group bg-white cursor-pointer mt-20 text-black px-6 py-3 font-semibold hover:bg-gray-200 transition">
+  Book your laptop
+  <span className="inline-block ml-2 transform transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</button>
+
           </div>
         </div>
       </div>
