@@ -19,7 +19,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/50 z-0"></div>
 
       {/* Header */}
-      <div className="relative z-10 flex justify-between items-center py-16 max-w-[1280px] px-4 md-px-12 mx-auto">
+      <div className="relative z-10 flex justify-between items-center py-4 max-w-[1280px] px-4 md:px-12 mx-auto">
         <img src={logo} alt="Logo" className="w-10 h-10" loading="lazy" />
         <Link to="/contact">
           <button className="group bg-white text-black font-black text-lg px-4 py-2 transition hover:bg-gray-200">
@@ -46,31 +46,33 @@ const HeroSection = () => {
         </p>
 
         {/* Buttons Container */}
-        <div className="mt-7 sm:mt-8 flex justify-between items-center gap-4">
-          {/* Book a Space Button */}
-          <Link to="/contact">
-            <button className="group bg-white text-black px-6 py-2.5 text-lg font-semibold hover:bg-gray-200 transition duration-300 cursor-pointer">
-              Book a Space
-              <span className="inline-block ml-2 transform transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-            </button>
-          </Link>
+<div className="mt-7 sm:mt-8 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+  {/* Book a Space Button */}
+  <Link to="/contact" className="sm:flex-1">
+    <button className="group bg-white text-black px-6 py-2.5 text-lg font-semibold hover:bg-gray-200 transition duration-300 cursor-pointer w-full sm:w-auto whitespace-nowrap">
+      Book a Space
+      <span className="inline-block ml-2 transform transition-transform duration-300 group-hover:translate-x-1">
+        →
+      </span>
+    </button>
+  </Link>
 
-          {/* Scroll Down Button (shared for all views) */}
-          <button
-            onClick={handleScroll}
-            className="group flex items-center gap-2 border border-white px-4 py-2 hover:bg-white/20 transition duration-300 cursor-pointer"
-          >
-            <span>Scroll Down</span>
-            <span className="inline-block transform transition-transform duration-300 group-hover:translate-y-1">
-              ↓
-            </span>
-          </button>
-        </div>
+  {/* Scroll Down Button */}
+  <button
+    onClick={handleScroll}
+    className="group flex items-center justify-center gap-2 border border-white px-4 py-2 hover:bg-white/20 transition duration-300 cursor-pointer w-full sm:w-auto whitespace-nowrap"
+  >
+    <span>Scroll Down</span>
+    <span className="inline-block transform transition-transform duration-300 group-hover:translate-y-1">
+      ↓
+    </span>
+  </button>
+</div>
+
       </div>
     </section>
   );
 };
 
 export default HeroSection;
+
