@@ -49,7 +49,7 @@ const HeroSection = () => {
         <div className="mt-7 sm:mt-8 flex justify-between items-center gap-4">
           {/* Book a Space Button */}
           <Link to="/contact">
-            <button className="group bg-white text-black px-6 py-2.5 text-lg font-semibold hover:bg-gray-200 transition duration-300 cursor-pointer">
+            <button className="group mt-10 bg-white text-black px-6 py-2.5 text-lg font-semibold hover:bg-gray-200 transition duration-300 cursor-pointer">
               Book a Space
               <span className="inline-block ml-2 transform transition-transform duration-300 group-hover:translate-x-1">
                 →
@@ -60,7 +60,7 @@ const HeroSection = () => {
           {/* Scroll Down Button (shared for all views) */}
           <button
             onClick={handleScroll}
-            className="group flex items-center gap-2 border border-white px-4 py-2 hover:bg-white/20 transition duration-300 cursor-pointer"
+            className="group flex items-center gap-2 border mt-10 border-white px-4 py-2 hover:bg-white/20 transition duration-300 cursor-pointer"
           >
             <span>Scroll Down</span>
             <span className="inline-block transform transition-transform duration-300 group-hover:translate-y-1">
