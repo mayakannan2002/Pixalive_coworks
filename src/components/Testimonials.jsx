@@ -12,7 +12,7 @@ const testimonialData = [
     description:
       '"Pixalive Tech Coworks has completely transformed the way I work. The energy, the network, and the amenities are just perfect for freelancers like me. I found clients, collaborators, and a space that feels like home."',
     name: 'Dinesh',
-    role: 'Freelance Developer',
+    role: 'Freelance Developer',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const testimonialData = [
     description:
       '"We moved our 5-member team into Pixalive Tech Coworks and never looked back. From reliable internet to meeting rooms and great coffee, everything’s seamless. Plus, we’ve made valuable connections with other tech teams."',
     name: 'Athresh',
-    role: 'Co-founder, Hirewalks',
+    role: 'Co-founder, Hirewalks',
   },
   {
     id: 3,
@@ -48,9 +48,10 @@ export default function TestimonialSlider() {
 
   useEffect(() => {
     const container = containerRef.current;
+    if (!container) return;
 
     const getScrollAmount = () => {
-      const firstCard = container?.children?.[0];
+      const firstCard = container.children?.[0];
       if (!firstCard) return 0;
       const style = window.getComputedStyle(firstCard);
       const marginRight = parseFloat(style.marginRight);
@@ -84,46 +85,45 @@ export default function TestimonialSlider() {
 
   return (
     <>
-      {/* Top Text Section */}
-      <section className="max-w-[1260px] mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6 px-4 sm:px-6 md:px-8 mt-[80px] md:mt-[140px] mb-[80px]">
-        {/* Left small heading */}
+      {/* Heading */}
+      <section className="max-w-[1280px] mx-auto px-3 flex flex-col md:flex-row items-center md:items-start justify-between gap-6  mt-[80px] md:mt-[140px] mb-[80px]">
+        {/* Small heading */}
         <div className="w-full md:w-1/3 flex justify-center md:justify-start">
           <p className="text-[16px] sm:text-[18px] text-black text-center md:text-left leading-tight">
             Loved by the People<br />Who Work Here
           </p>
         </div>
 
-        {/* Right main heading */}
+        {/* Main heading */}
         <div className="w-full md:w-2/3 flex justify-center md:justify-end">
-          <h1 className="text-[20px] sm:text-[30px] md:text-[40px] leading-[140%] font-semibold text-black text-center md:text-left max-w-[600px]">
+          <h1 className="text-[24px] sm:text-[30px] md:text-[36px] leading-[140%] font-semibold text-black text-center md:text-left max-w-[600px]">
             Our members say it best. <br />
             Dive into their experiences <br />
             and discover why Pixalive <br />
-            isn’t just a co-working space <br />- 
-            it’s a thriving community.
+            isn’t just a co-working space <br />– it’s a thriving community.
           </h1>
         </div>
       </section>
 
-      {/* Testimonial Slider Section */}
+      {/* Testimonial Cards */}
       <section className="w-full bg-white py-10">
-        <div className="max-w-[1250px] mx-auto px-4 sm:px-6 md:px-8">
+        <div className="max-w-[1280px] mx-auto ">
           <div
             ref={containerRef}
-            className="flex gap-6 overflow-x-scroll scroll-smooth scrollbar-hide"
+            className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide"
             style={{ scrollSnapType: "x mandatory" }}
           >
             {testimonialData.map((item) => (
               <div
                 key={item.id}
-                className="flex-shrink-0 w-[90vw] sm:w-[70vw] md:w-[50vw] lg:w-[32%] bg-white border border-gray-200 shadow-md  px-6 py-6"
+                className="flex-shrink-0 w-[90vw] sm:w-[70vw] md:w-[50vw] lg:w-[32%] bg-white border border-gray-200 shadow-md px-6 py-6 rounded-md"
                 style={{ scrollSnapAlign: "start" }}
               >
                 <div className="flex flex-col h-full">
                   <img
                     src={item.image}
-                    alt="user"
-                    className="w-12 h-12 mb-4 object-cover"
+                    alt={item.username}
+                    className="w-12 h-12 mb-4 object-cover rounded-full"
                   />
                   <h3 className="text-black font-semibold text-md mb-2">
                     {item.username}

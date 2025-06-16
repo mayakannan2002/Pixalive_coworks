@@ -76,10 +76,11 @@ const MembershipSlider = () => {
   }, []);
 
   return (
-    <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-12">
-      <h2 className="text-[18px] sm:text-2xl font-medium mb-6">
+    <div className="max-w-[1280px] mx-auto px-3 py-12">
+      <h2 className="text-[16px] sm:text-[18px] text-black text-center md:text-left leading-tight">
         Discover Our Membership <br className="hidden sm:block" /> Plans
       </h2>
+      <br/>
 
       {/* Horizontal scroll container with padding and spacing */}
       <div className="overflow-hidden">
@@ -94,23 +95,22 @@ const MembershipSlider = () => {
               className="flex-shrink-0 w-[85vw] sm:w-[60vw] md:w-[40vw] lg:w-[calc(100%/3.2)] scroll-snap-align-start"
               style={{ scrollSnapAlign: "start" }}
             >
-              <div >
+              <div>
                 <img
                   src={plan.image}
                   alt={plan.title}
-                  className="w-full h-85  object-cover "
+                  className="w-full h-85 object-cover"
                   loading="lazy"
                 />
-              
-                  <h3 className="text-lg font-bold mt-5">{plan.title}</h3>
-                  <p className="text-sm text-gray-600 mt-2">{plan.description}</p>
-                
+                <h3 className="text-lg font-bold mt-5">{plan.title}</h3>
+                <p className="text-sm text-gray-600 mt-2">{plan.description}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
     </div>
+      
   );
 };
 

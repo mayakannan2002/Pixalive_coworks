@@ -50,12 +50,12 @@ const FaqTabs = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div className="max-w-[1280px]  md:mt-26 mx-auto md:px-10 px-2 py-10">
-            <h2 className="text-sm md:text-lg font-medium text-black mb-15">
+        <div className="max-w-[1280px] mx-auto px-3 py-10 md:mt-26">
+            <h2 className="text-sm md:text-lg font-medium  mb-15 text-[16px] sm:text-[18px] text-black text-center md:text-left leading-tight">
                 Why Pixalive tech Co-work?
             </h2>
 
-            <div className="bg-white space-y-2.5 ">
+            <div className="bg-white space-y-2.5">
                 {faqData.map((item, index) => (
                     <div key={index}>
                         <button

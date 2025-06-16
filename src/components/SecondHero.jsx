@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 const LaptopBookingSection = () => {
   return (
     <section
-      className="relative w-full min-h-[600px] md:min-h-[900px] bg-cover bg-center font-lufga flex justify-center items-center "
+      className="relative w-full min-h-[600px] px-3 md:min-h-[900px] bg-cover bg-center font-lufga flex justify-center items-center "
       loading="lazy"
       style={{
         backgroundImage: `url(${BG1})`,
@@ -13,7 +13,7 @@ const LaptopBookingSection = () => {
     >
       <div className="absolute inset-0 bg-black/50 z-0" />
       
-      <div className="relative z-10 w-full max-w-[1260px] px-4 sm:px-6 lg:px-8 text-white">
+      <div className="relative z-10 w-full max-w-[1260px]   text-white">
         <div className="py-12 sm:py-16 md:py-24 lg:py-32">
           <h2 className="text-base sm:text-lg md:text-xl font-semibold text-[#B0B0B0]">
             Laptop Rental

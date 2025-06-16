@@ -38,8 +38,7 @@ const GalleryContinuation = () => {
   const duplicatedGroups = [...columnGroups, ...columnGroups];
 
   return (
-    <div className=" py-10 px-4 sm:px-10 overflow-hidden">
-      {/* Animation styles inside the component */}
+    <section className="py-16 px-0">
       <style>{`
         @keyframes scrollX {
           0% { transform: translateX(0); }
@@ -56,41 +55,21 @@ const GalleryContinuation = () => {
         }
       `}</style>
 
-     
+      {/* Heading Section */}
+      <div className="max-w-[1280px] mx-auto px-3 flex flex-col md:flex-row gap-12 mb-10">
+        <div className="md:w-1/2">
+          <p className="text-[16px] sm:text-[18px] text-black text-center md:text-left leading-tight">Gallery</p>
+        </div>
+        <div className="md:w-2/2 max-w-[500px]">
+          <p className="text-[24px] sm:text-[30px] md:text-[36px] leading-[140%] font-semibold text-black text-center md:text-left max-w-[600px]">
+            A visual glimpse into our <br/>shared workspace — where <br/>focus, collaboration, and <br/>creativity meet in calm <br/>simplicity.
+          </p>
+        </div>
+      </div>
 
-       <section className="max-w-[1260px] mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6 px-4 sm:px-6 md:px-8 mt-[80px] md:mt-[140px] mb-[80px]">
-       
-            {/* Left small heading */}
-            <div className="w-full md:w-/3 flex justify-center md:justify-start">
-                <p className="text-[16px] sm:text-[18px] text-black text-center md:text-left leading-tight">Gallery
-                </p>
-            </div>
-
-            {/* Right main heading */}
-            <div className="w-full md:w-2/3 flex justify-center md:justify-end">
-                <h1 className="text-[20px] sm:text-[30px] md:text-[40px] leading-[140%] font-semibold text-black text-center md:text-left max-w-[600px]">
-                     A visual glimpse into our 
-                    shared workspace - where
-                    focus, collaboration,and
-                    creativity meet in calm
-                    simplicity.                </h1>
-            </div>
-
-        </section>
-
-      {/* Header */}
-    {/* <div className="  max-w-[1260px]  flex flex-col sm:flex-row sm:justify-between sm:items-start items-center justify-center text-center mb-8 gap-y-6 sm:gap-y-0">
-        <h2 className=" max-w-[1260px] text-md font-medium mb-2 sm:mb-0 sm:mr-4">Gallery</h2>
-        <p className=" max-w-[1260px] text-[20px] sm:text-[30px] md:text-[40px] leading-[140%] font-semibold text-black sm:text-left">
-          A visual glimpse into our <br />shared workspace — where<br /> focus, collaboration,
-          and <br />creativity meet in calm <br />simplicity.
-        </p>
-    </div> */}
-
-
-      {/* Looping Gallery */}
+      {/* Looping Gallery Section */}
       <div
-        className="relative overflow-hidden max-w-[1240px] mx-auto"
+        className="relative overflow-hidden max-w-[1280px] mx-auto px-3"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
@@ -98,20 +77,20 @@ const GalleryContinuation = () => {
           {duplicatedGroups.map((column, index) => (
             <div
               key={index}
-              className="flex flex-col justify-between gap-4 flex-shrink-0 w-[300px] h-[420px]"
+              className="flex flex-col justify-between gap-4 flex-shrink-0 w-[200px] h-[420px]"
             >
               {column.map((img, subIndex) => (
                 <div
                   key={subIndex}
-                  className={`relative w-full overflow-hidden shadow-md group ${
+                  className={`relative w-full overflow-hidden shadow-md group rounded-lg ${
                     column.length === 2 ? 'h-1/2' : 'h-full'
                   }`}
                 >
                   <img
                     src={img.src}
                     alt={img.title}
-                    className="w-full h-full object-cover"
-                    loading='lazy'
+                    className="w-full h-full object-cover rounded-lg"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                     <p className="text-white text-lg font-semibold">{img.title}</p>
@@ -122,7 +101,7 @@ const GalleryContinuation = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
